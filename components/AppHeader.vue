@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <header class="bg-bg-light text-text-dark font-familjen px-20 py-6">
+    <header
+        class="bg-light text-text-dark font-familjen px-20 py-6 w-full fixed z-[100] top-0 left-0 right-0"
+    >
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <NuxtLink to="/">
@@ -119,6 +121,7 @@
             </div>
         </div>
     </header>
+    <div class="spacer h-22"></div>
 </template>
 
 <style scoped>
