@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+    --color-pcci-orange: #ffa500;
+    --color-pcci-blue: #1b40a3;
+    --color-text-dark: #212121;
+    --color-text-medium: #1f262e;
+    --color-light: #ffffff;
+    --color-offwhite: #e8ecf6;
+    --color-gray: #f1f1f1;
+
+    --font-familjen: "Familjen Grotesk", sans-serif;
+    --font-pragati: "Pragati Narrow", sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
+    --font-source-serif: "Source Serif 4", serif;
+    --font-akshar: "Akshar", sans-serif;
+    --font-dm-sans: "DM Sans", sans-serif;
+
+    /* Text sizes based on Figma (adjust if more specific info available) */
+    --text-xs: 0.75rem; /* 12px */
+    --text-sm: 0.875rem; /* 14px */
+    --text-base: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-2xl: 1.5rem; /* 24px */
+    --text-3xl: 1.875rem; /* 30px */
+    --text-4xl: 2.25rem; /* 36px */
+    --text-5xl: 3rem; /* 48px */
+    --text-6xl: 3.75rem; /* 60px */
+    --text-7xl: 4.5rem; /* 72px */
+
+    /* Font weights (can be added if needed beyond Tailwind defaults) */
+    /* --font-weight-regular: 400; */
+    /* --font-weight-medium: 500; */
+    /* --font-weight-semibold: 600; */
+    /* --font-weight-bold: 700; */
+
+    /* Spacing/Radius (can be added if consistent patterns found) */
+    /* --radius-button: 8px; */
+}
