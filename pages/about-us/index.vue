@@ -1,19 +1,29 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const slides = [
+    {
+        title: "About Us",
+        description: "Be a member now!",
+        image: "/images/hero-background.jpg",
+    },
+];
+</script>
 <template>
-    <general-carousel />
-    <section class="px-32 py-16 space-y-16">
-        <!-- Vision & Mission -->
-        <div class="space-y-10">
+    <general-carousel :items="slides" />
+    <!-- Vision & Mission -->
+    <section>
+        <div class="space-y-10 max-w-[1000px] mx-auto pt-32 pb-16">
             <!-- Vision -->
-            <div class="flex items-center gap-16">
-                <img
-                    src="/images/vision-image.png"
-                    alt="Vision Image"
-                    class="w-1/2 object-cover rounded-lg"
-                />
-                <div class="w-1/2 space-y-8">
+            <div class="flex items-center space-x-16">
+                <div class="w-[322px] aspect-square relative">
+                    <img
+                        src="/images/vision-image.png"
+                        alt="Vision Image"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <div class="flex-1 space-y-8">
                     <h2 class="text-5xl font-bold text-gray-800">Vision</h2>
-                    <p class="text-base text-gray-700 leading-relaxed">
+                    <p class="text-gray-700">
                         The PCCI is a full-service oriented canine club at par
                         with the worlds best kennel clubs, recognized for its
                         integrity, its efficiency, its capacity to exceed its
@@ -23,10 +33,10 @@
                 </div>
             </div>
             <!-- Mission -->
-            <div class="flex items-center gap-16">
-                <div class="w-1/2 space-y-8">
+            <div class="flex items-center space-x-16">
+                <div class="flex-1 space-y-8">
                     <h2 class="text-5xl font-bold text-gray-800">Mission</h2>
-                    <p class="text-base text-gray-700 leading-relaxed">
+                    <p class="text-gray-700">
                         To promote the integrity of the purebred dog registry,
                         to encourage ethical breeding practices, to organize
                         world-class canine exhibitions, to disseminate canine
@@ -34,21 +44,27 @@
                         welfare.
                     </p>
                 </div>
-                <img
-                    src="/images/mission-image.png"
-                    alt="Mission Image"
-                    class="w-1/2 object-cover rounded-lg"
-                />
+                <div class="w-[322px] aspect-square relative">
+                    <img
+                        src="/images/mission-image.png"
+                        alt="Vision Image"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- History -->
-        <div class="space-y-16">
-            <img
-                src="/images/history-image.png"
-                alt="History Image"
-                class="w-full h-64 object-cover rounded-lg"
-            />
+    <!-- History -->
+    <section>
+        <div class="max-w-[1000px] m-auto space-y-16 pb-16">
+            <div class="w-full aspect-[2/1] relative">
+                <img
+                    src="/images/history-image.png"
+                    alt="History Image"
+                    class="w-full h-full object-cover"
+                />
+            </div>
             <div class="space-y-8">
                 <h2 class="text-5xl font-bold text-gray-800">History</h2>
                 <div class="text-base text-gray-700 leading-relaxed space-y-4">
@@ -86,65 +102,74 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Services -->
-        <div class="text-center space-y-16">
+    <!-- Services -->
+    <section>
+        <div class="max-w-[1000px] text-center space-y-16 m-auto pb-32">
             <h2 class="text-5xl font-bold text-gray-800">Services</h2>
-            <div class="flex justify-between items-start gap-4">
-                <!-- Service 1 -->
+            <div class="relative">
                 <div
-                    class="flex flex-col items-center gap-4 text-center flex-1 px-4"
-                >
-                    <img
-                        src="/images/service-dog-registration.png"
-                        alt="Dog Registration Service"
-                        class="w-full h-48 object-cover rounded-lg mb-4"
-                    />
-                    <h3 class="text-lg font-bold text-gray-800">
-                        Dog Registration
-                    </h3>
-                    <p class="text-base text-gray-700 leading-relaxed">
-                        The Philippine Canine Club, Inc. was organized on March
-                        21, 1963, as a non-stock
-                    </p>
-                </div>
-                <div
-                    class="border-l-4 border-yellow-500 h-48 self-center"
+                    class="w-full h-1 absolute top-1/2 -translate-y-[1/2] bg-pcci-orange z-0"
                 ></div>
-                <!-- Separator -->
-                <!-- Service 2 -->
-                <div
-                    class="flex flex-col items-center gap-4 text-center flex-1 px-4"
-                >
-                    <img
-                        src="/images/service-membership.png"
-                        alt="Membership Service"
-                        class="w-full h-48 object-cover rounded-lg mb-4"
-                    />
-                    <h3 class="text-lg font-bold text-gray-800">Membership</h3>
-                    <p class="text-base text-gray-700 leading-relaxed">
-                        The Philippine Canine Club, Inc. was organized on March
-                        21, 1963, as a non-stock
-                    </p>
-                </div>
-                <div
-                    class="border-l-4 border-yellow-500 h-48 self-center"
-                ></div>
-                <!-- Separator -->
-                <!-- Service 3 -->
-                <div
-                    class="flex flex-col items-center gap-4 text-center flex-1 px-4"
-                >
-                    <img
-                        src="/images/service-events.png"
-                        alt="Events Service"
-                        class="w-full h-48 object-cover rounded-lg mb-4"
-                    />
-                    <h3 class="text-lg font-bold text-gray-800">Events</h3>
-                    <p class="text-base text-gray-700 leading-relaxed">
-                        The Philippine Canine Club, Inc. was organized on March
-                        21, 1963, as a non-stock
-                    </p>
+                <div class="flex justify-between items-start gap-4 relative">
+                    <!-- Service 1 -->
+                    <div
+                        class="flex flex-col items-center gap-4 text-center flex-1 max-w-[217px] px-4 bg-offwhite"
+                    >
+                        <div class="w-[140px] m-auto">
+                            <img
+                                src="/images/service-dog-registration.png"
+                                alt="Dog Registration Service"
+                                class="w-full h-full m-auto mb-4"
+                            />
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Dog Registration
+                        </h3>
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            The Philippine Canine Club, Inc. was organized on
+                            March 21, 1963, as a non-stock
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="flex flex-col items-center gap-4 text-center flex-1 max-w-[217px] px-4 bg-offwhite"
+                    >
+                        <div class="w-[140px] m-auto">
+                            <img
+                                src="/images/service-membership.png"
+                                alt="Dog Registration Service"
+                                class="w-full h-full m-auto mb-4"
+                            />
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Membership
+                        </h3>
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            The Philippine Canine Club, Inc. was organized on
+                            March 21, 1963, as a non-stock
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="flex flex-col items-center gap-4 text-center flex-1 max-w-[217px] px-4 bg-offwhite"
+                    >
+                        <div class="w-[140px] m-auto">
+                            <img
+                                src="/images/service-events.png"
+                                alt="Dog Registration Service"
+                                class="w-full h-full m-auto mb-4"
+                            />
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Events</h3>
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            The Philippine Canine Club, Inc. was organized on
+                            March 21, 1963, as a non-stock
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

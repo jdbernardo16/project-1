@@ -8,6 +8,7 @@
     --color-light: #ffffff;
     --color-offwhite: #e8ecf6;
     --color-gray: #f1f1f1;
+    --color-neutral: #212121;
 
     --font-familjen: "Familjen Grotesk", sans-serif;
     --font-pragati: "Pragati Narrow", sans-serif;
@@ -37,4 +38,8 @@
 
     /* Spacing/Radius (can be added if consistent patterns found) */
     /* --radius-button: 8px; */
+}
+
+body {
+    font-family: var(--font-familjen);
 }

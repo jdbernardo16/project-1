@@ -4,19 +4,15 @@ import { Pagination as SwiperPagination } from "swiper/modules"; // Renamed to a
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Array of image URLs for each slide
-const slides = [
-    {
-        title: "Costume Contest",
-        description: "Direct message Philippine Canine Club, Inc. to join!",
-        image: "/images/hero-background.jpg",
-    },
-    {
-        title: "Costume Contest",
-        description: "Direct message Philippine Canine Club, Inc. to join!",
-        image: "/images/hero-background.jpg",
-    },
-];
+// Define the interface for slide items
+interface IItems {
+    title: string;
+    description: string;
+    image: string;
+}
+
+// Define props using TypeScript generic syntax
+defineProps<{ items: IItems[] }>();
 </script>
 <template>
     <div
@@ -32,7 +28,7 @@ const slides = [
             class="h-full w-full"
         >
             <SwiperSlide
-                v-for="(slide, index) in slides"
+                v-for="(slide, index) in items"
                 :key="index"
                 class="relative"
             >

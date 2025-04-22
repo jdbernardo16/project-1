@@ -1,7 +1,14 @@
-<script lang="ts" setup></script>
-
+<script lang="ts" setup>
+const slides = [
+    {
+        title: "Code of Ethics",
+        description: "Be a member now!",
+        image: "/images/hero-background.jpg",
+    },
+];
+</script>
 <template>
-    <general-carousel />
+    <general-carousel :items="slides" />
     <section class="flex flex-col items-center self-stretch py-30 px-32">
         <div class="flex flex-col gap-8 w-[800px]">
             <img

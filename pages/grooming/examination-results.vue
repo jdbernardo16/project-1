@@ -8,7 +8,7 @@ const options = [
 
 const slides = [
     {
-        title: "Circulars",
+        title: "Examination Results",
         description: "Be a member now!",
         image: "/images/hero-background.jpg",
     },
@@ -47,13 +47,9 @@ const slides = [
                 <!-- Sample Circular Item 1 -->
                 <div v-for="i in 5" class="border-b border-neutral/10 pb-6">
                     <div
-                        class="flex flex-col sm:flex-row justify-between items-start mb-3.5 gap-4"
+                        class="flex flex-col sm:flex-row justify-between items-start mb-1.5 space-x-4"
                     >
-                        <h3
-                            class="text-xl sm:text-2xl font-bold text-gray-900 leading-tight flex-1"
-                        >
-                            Reminder To Prospective Puppy Buyers and Sellers
-                        </h3>
+                        <p class="text-sm text-neutral/72">June 29, 2023</p>
                         <a
                             href="#"
                             class="flex items-center text-pcci-orange font-medium text-lg hover:text-orange-600 whitespace-nowrap space-x-2"
@@ -62,43 +58,15 @@ const slides = [
                             <img src="/images/arrow-up-right.svg" alt="View" />
                         </a>
                     </div>
-                    <div
-                        class="flex flex-wrap items-center space-x-8 sm:space-x-11 pl-0 sm:pl-2 text-sm"
-                    >
-                        <div class="flex flex-col mt-2 sm:mt-0">
-                            <div
-                                class="flex items-center text-neutral/72 mb-0.5"
-                            >
-                                <img
-                                    src="/icons/hashtag.svg"
-                                    alt=""
-                                    class="mr-1 h-4 w-4"
-                                />
-                                <span class="text-base">Circular number</span>
-                            </div>
-                            <span
-                                class="font-semibold text-gray-800 text-base sm:text-lg"
-                            >
-                                2021-004
-                            </span>
-                        </div>
-                        <div class="flex flex-col mt-2 sm:mt-0">
-                            <div
-                                class="flex items-center text-neutral/72 mb-0.5"
-                            >
-                                <img
-                                    src="/icons/calendar.svg"
-                                    alt=""
-                                    class="mr-1 h-4 w-4"
-                                />
-                                <span class="text-base">Date issued</span>
-                            </div>
-                            <span
-                                class="font-semibold text-gray-800 text-base sm:text-lg"
-                            >
-                                5/17/2021
-                            </span>
-                        </div>
+                    <div>
+                        <h3
+                            class="text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-2"
+                        >
+                            Reminder To Prospective Puppy Buyers and Sellers
+                        </h3>
+                        <p class="text-lg text-neutral/72 font-medium">
+                            PCCI Office, Cubao Quezon City 
+                        </p>
                     </div>
                 </div>
             </div>
